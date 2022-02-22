@@ -22,5 +22,5 @@ public abstract class Animal {
                 '}';
     }
 
-    abstract public void mananca();
+    abstract public void mananca(String mancare);
 }
