@@ -8,6 +8,6 @@ public class Girafa extends Animal {
 
     @Override
     public void mananca(String mancare) {
-        System.out.println("Girafa" + this.getNume() + "mananca" + mancare);
+        System.out.println("Girafa " + this.getNume() + " mananca " + mancare);
     }
 }
