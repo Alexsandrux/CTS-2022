@@ -9,7 +9,7 @@ public class Program {
         List<Aplicant> angajati;
         AngajatiReader readerAngajati = new AngajatiReader();
         try {
-            angajati = readerAngajati.citireAplicants("Fisiere/angajati.txt");
+            angajati = readerAngajati.citireAplicants("Fisiere/Seminar2/angajati.txt");
             for (Aplicant angajat : angajati)
                 System.out.println(angajat.toString());
         } catch (FileNotFoundException e) {
