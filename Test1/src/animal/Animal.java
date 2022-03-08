@@ -1,4 +1,4 @@
-package sources.animal;
+package animal;
 
 public abstract class Animal {
     private String nume;

@@ -1,4 +1,4 @@
-package sources.animal;
+package animal;
 
 public class IngrijitorZoo {
     private String nume;

@@ -1,4 +1,4 @@
-package sources.animal;
+package animal;
 
 public class Zebra extends Animal{
     public Zebra(String nume) {

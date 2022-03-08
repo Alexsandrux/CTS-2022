@@ -1,4 +1,4 @@
-package sources.animal;
+package animal;
 
 import java.util.ArrayList;
 import java.util.List;

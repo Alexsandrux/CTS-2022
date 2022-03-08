@@ -1,4 +1,4 @@
-package sources.animal;
+package animal;
 
 public class main {
     public static void main(String[] args) {
