@@ -1,35 +1,33 @@
 package Seminar2;
 
+import java.util.Arrays;
+
 public abstract class Aplicant {
     protected String nume;
     protected String prenume;
-    protected int varsta;
-    protected int punctaj;
-    protected int nrProiecte;
+    protected Integer varsta;
+    protected Integer punctaj;
+    protected Integer nrProiecte;
     protected String[] denumiriProiecte;
     protected static int pragPunctaj = 80;
 
-    public String getNume() {
-        return nume;
-    }
-
     public void setNume(String nume) {
         this.nume = nume;
-    }
-
-    public String getPrenume() {
-        return prenume;
     }
 
     public void setPrenume(String prenume) {
         this.prenume = prenume;
     }
 
-    public int getVarsta() {
-        return varsta;
+    public String getNume() {
+        return nume;
     }
 
-    public void setVarsta(int varsta) {
+    public String getPrenume() {
+        return prenume;
+    }
+
+    public void setVarsta(Integer varsta) {
         this.varsta = varsta;
     }
 
@@ -40,47 +38,21 @@ public abstract class Aplicant {
             System.out.println("Aplicantul " + nume + " " + prenume + " nu a fost acceptat.");
     }
 
-    public int getPunctaj() {
-        return punctaj;
+
+    public void afisareSalariuZilnic(int salariu) {
+        System.out.println("Aplicantul " + getNume() + " " + getPrenume() + " primeste" + salariu + " Euro/zi in proiect.");
     }
 
-    public void setPunctaj(int punctaj) {
+    public void setPunctaj(Integer punctaj) {
         this.punctaj = punctaj;
     }
-
-    public static int getPragPunctaj() {
-        return pragPunctaj;
-    }
-
-    public static void setPragPunctaj(int pragPunctaj) {
-        Aplicant.pragPunctaj = pragPunctaj;
-    }
-
-    public String[] getDenumirProiect() {
-        return denumiriProiecte;
-    }
-
 
 
     public Aplicant() {
         super();
     }
 
-    public Aplicant(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect) {
-        super();
-        this.nume = nume;
-        this.prenume = prenume;
-        this.varsta = varsta;
-        this.punctaj = punctaj;
-        this.nrProiecte = nr_proiecte;
-        this.denumiriProiecte = denumireProiect;
-    }
-
-    public int getNrProiecte() {
-        return nrProiecte;
-    }
-
-    public void setDenumiriProiecte(int nr_proiecte, String[] denumireProiect) {
+    public void setDenumiriProiecte(Integer nr_proiecte, String[] denumireProiect) {
         this.nrProiecte = nr_proiecte;
         this.denumiriProiecte = new String[nr_proiecte];
         for(int i=0; i < nr_proiecte; i++)
@@ -89,8 +61,15 @@ public abstract class Aplicant {
         }
     }
 
-    public void afisareSalariuZilnic(int salariu) {
-        System.out.println("Aplicantul " + getNume() + " " + getPrenume() + " primeste" + salariu + " Euro/zi in proiect.");
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("nume=");
+        sb.append(nume).append('\'');
+        sb.append(", prenume='").append(prenume).append('\'');
+        sb.append(", varsta=").append(varsta);
+        sb.append(", punctaj=").append(punctaj);
+        sb.append(", nrProiecte=").append(nrProiecte);
+        sb.append(", denumiriProiecte=").append(Arrays.toString(denumiriProiecte));
+        return sb.toString();
     }
-
 }

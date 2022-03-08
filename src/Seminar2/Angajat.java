@@ -1,31 +1,16 @@
 package Seminar2;
 
-import java.util.Arrays;
-
 public class Angajat extends Aplicant {
     private String ocupatie;
-    private int salariu;
-
-    public String getOcupatie() {
-        return ocupatie;
-    }
+    private Integer salariu;
 
     public void setOcupatie(String ocupatie) {
         this.ocupatie = ocupatie;
     }
 
-    public int getSalariu() {
-        return salariu;
-    }
 
-    public void setSalariu(int salariu) {
+    public void setSalariu(Integer salariu) {
         this.salariu = salariu;
-    }
-
-    public Angajat(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumire_Proiecte, int salariu, String ocupatie) {
-        super(nume, prenume, varsta, punctaj, nr_proiecte, denumire_Proiecte);
-        this.salariu = salariu;
-        this.ocupatie = ocupatie;
     }
 
     public Angajat() {
@@ -36,10 +21,11 @@ public class Angajat extends Aplicant {
 
     @Override
     public String toString() {
-        return "Angajat: Nume=" + nume + ", Prenume=" + prenume
-                + ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nrProiecte + ", DenumireProiect="
-                + Arrays.toString(denumiriProiecte) + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
+        final StringBuilder sb = new StringBuilder("Angajat{");
+        sb.append(super.toString());
+        sb.append("Ocupatie=").append(ocupatie);
+        sb.append("Salariu=").append(salariu);
+
+        return sb.toString();
     }
-
-
 }

@@ -9,25 +9,31 @@ import java.util.Scanner;
 public class EleviReader implements AplicantiReader{
     @Override
     public List<Aplicant> citireAplicants(String numeFisier) throws FileNotFoundException {
-        Scanner input2 = new Scanner(new File(numeFisier));
-        input2.useDelimiter(",|\n");
-        List<Aplicant> elevi = new ArrayList<Aplicant>();
+        Scanner scanner = new Scanner(new File(numeFisier));
+        scanner.useDelimiter(",");
+        List<Aplicant> elevi = citireAplicantidinScanner(scanner);
 
-        while (input2.hasNext()) {
+
+        scanner.close();
+        return elevi;
+    }
+
+    private List<Aplicant> citireAplicantidinScanner(Scanner scanner) {
+        List<Aplicant> elevi = new ArrayList<>();
+
+        while (scanner.hasNext()) {
             Elev elevNou = new Elev();
 
-            AplicantReader.citireAplicant(input2, elevNou);
+            AplicantReader.citireAplicant(scanner, elevNou);
 
-            int clasa = input2.nextInt();
-            String tutore = input2.next();
+            int clasa = scanner.nextInt();
+            String tutore = scanner.next();
 
             elevNou.setClasa(clasa);
             elevNou.setTutore(tutore);
 
             elevi.add(elevNou);
         }
-
-        input2.close();
         return elevi;
     }
 }

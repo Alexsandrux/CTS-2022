@@ -9,23 +9,31 @@ import java.util.Scanner;
 public class AngajatiReader implements AplicantiReader {
     @Override
     public List<Aplicant> citireAplicants(String numeFisier) throws FileNotFoundException {
-        Scanner input2 = new Scanner(new File(numeFisier));
-        input2.useDelimiter(",");
-        List<Aplicant> angajati = new ArrayList<Aplicant>();
+        Scanner scanner = new Scanner(new File(numeFisier));
+        scanner.useDelimiter(",");
+        List<Aplicant> angajati = citireAplicantidinScanner(scanner);
 
-        while (input2.hasNext()) {
+
+        scanner.close();
+        return angajati;
+    }
+
+    private List<Aplicant> citireAplicantidinScanner(Scanner scanner) {
+        List<Aplicant> angajati = new ArrayList<>();
+
+        while (scanner.hasNext()) {
             Angajat angajatNou = new Angajat();
 
-            AplicantReader.citireAplicant(input2, angajatNou);
+            AplicantReader.citireAplicant(scanner, angajatNou);
 
-            int salariu = input2.nextInt();
-            String ocupatie = input2.next();
+            int salariu = scanner.nextInt();
+            String ocupatie = scanner.next();
             angajatNou.setSalariu(salariu);
             angajatNou.setOcupatie(ocupatie);
 
             angajati.add(angajatNou);
         }
-        input2.close();
+
         return angajati;
     }
 }
