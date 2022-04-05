@@ -1,4 +1,4 @@
-package seminar5.builder.clase;
+package seminar5.builder_var2;
 
 public class AutobuzLinie {
     private int nrLinie;
@@ -9,41 +9,13 @@ public class AutobuzLinie {
     private String model;
     private int numarCalatori;
 
-    AutobuzLinie() {
-        this.nrLinie = 1;
-        this.numeSofer = "Sofer";
-        this.deschideUsile = true;
-        this.areOprire = true;
-        this.testRulat = "Text Rulat";
-        this.model = "Model autobuz";
-        this.numarCalatori = 20;
-    }
-
-    void setNrLinie(int nrLinie) {
+    public AutobuzLinie(int nrLinie, String numeSofer, boolean deschideUsile, boolean areOprire, String testRulat, String model, int numarCalatori) {
         this.nrLinie = nrLinie;
-    }
-
-    void setNumeSofer(String numeSofer) {
         this.numeSofer = numeSofer;
-    }
-
-    void setDeschideUsile(boolean deschideUsile) {
         this.deschideUsile = deschideUsile;
-    }
-
-    void setAreOprire(boolean areOprire) {
         this.areOprire = areOprire;
-    }
-
-    void setTestRulat(String testRulat) {
         this.testRulat = testRulat;
-    }
-
-    void setModel(String model) {
         this.model = model;
-    }
-
-    void setNumarCalatori(int numarCalatori) {
         this.numarCalatori = numarCalatori;
     }
 

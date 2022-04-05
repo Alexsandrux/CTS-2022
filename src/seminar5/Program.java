@@ -26,14 +26,14 @@ public class Program {
 //        System.out.println(tramvai1.toString());
 
 
-        AutobuzBuilder autobuzBuilder = new AutobuzBuilder();
-        AutobuzLinie autobuzLinie1 = autobuzBuilder.build();
-
-        System.out.println(autobuzLinie1);
-
-        autobuzBuilder.setTestRulat("Redducere!");
-        AutobuzLinie autobuzLinie2 = autobuzBuilder.build();
-        System.out.println(autobuzLinie2);
+//        AutobuzBuilder autobuzBuilder = new AutobuzBuilder();
+//        AutobuzLinie autobuzLinie1 = autobuzBuilder.build();
+//
+//        System.out.println(autobuzLinie1);
+//
+//        autobuzBuilder.setTestRulat("Redducere!");
+//        AutobuzLinie autobuzLinie2 = autobuzBuilder.build();
+//        System.out.println(autobuzLinie2);
 
 
 
