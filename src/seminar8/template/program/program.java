@@ -1,8 +1,7 @@
-package seminar8.chain.program;
+package seminar8.template.program;
 
 
-import seminar8.chain.clase.Tramvai;
-import seminar8.chain.clase.TramvaiProbe;
+import seminar8.template.clase.Tramvai;
 
 public class program {
     public static void main(String[] args) {

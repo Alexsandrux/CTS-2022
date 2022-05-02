@@ -1,4 +1,4 @@
-package seminar8.chain.clase;
+package seminar8.template.clase;
 
 public abstract class MijlocTransport {
 
